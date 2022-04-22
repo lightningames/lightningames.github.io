@@ -1,3 +1,3 @@
 # lightningames.github.io
 
-Hello World
+Hello.
