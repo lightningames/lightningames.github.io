@@ -15,8 +15,9 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 columns */
-      gap: 20px; /* Gap between grid items */
+      grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Adjusted columns */
+      gap: 20px;
+      justify-content: center; /* Centering the cards */
     }
   
     .container {
@@ -48,6 +49,21 @@
       height: 100px;
       fill: #FFFFFF; /* Set the default fill color */
     }
+    /* Media query for mobile responsiveness */
+    @media only screen and (max-width: 767px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr); /* Adjust columns for mobile view */
+      }
+    }
+
+    /* For screens larger than 768px */
+    @media only screen and (min-width: 768px) {
+      .container {
+        padding-left: 20px; /* Add extra padding on the left */
+        padding-right: 20px; /* Add extra padding on the right */
+      }
+    }
+
   </style>
 </head>
 <body>
